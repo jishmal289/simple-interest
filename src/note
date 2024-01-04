@@ -1,0 +1,786 @@
+react- fronent technology
+--------------------------------
+
+UI-User interface
+-----------------
+the point where te user -computer(software) intraction take place
+
+React use of JavaScript library for building user interfaces.
+liberiries- pre-defined codes to do perticular task
+-framework : pre-defined codes- highly restricted
+-library:pre-defined code with more freedom
+
+features of React
+------------------
+1), to create UI
+2), single page application : web application or website that intract with the user by dynamically rewriting the current webpage with new datas from the webserver , instead of default method of loading all the pages seperatelly
+3), declaritive application: 
+             doesnot access directly DOM real DOM created by browser
+
+4), virtual DOM: created by react, copying real dom and edit the virtual DOM    
+           diffing : process of comparing virtual dom with real dom
+            reconcilliation : process of updaating real dom
+5), immutable variable : cannot change value
+6), pure function : function that accept immutable variable and return an object -result only depnds on variable-eg: react componet
+7), data sharing : unidirection - parent to child
+8), language : jsx - JavaScript XML (its a combination of JavaScript,html, css)
+                        jsx expressio  must be inside a single parent element
+                        - empty tag - react fragment
+                        js code -jsx -to access {}
+
+9), transpiling : process of converting JSX into html JavaScript and css    
+                    BABEL- CONVERT 
+
+
+how to create a react project
+-----------------------------
+
+1), npx create-react-app projectname
+    npx-node package execute-
+    npm - node package manager-install
+
+2), change directory - cd projectname
+3), run command "npm start"
+
+files
+-----------
+1), readme.md : hold the discription of the files
+2), package.json : holds npm configurations - dependencies - installed liberiries
+3),package.lockjson : it holds versions of installed liberiries
+4), .gitignore : holds files that neednot to be pushed  into gitignore
+5), node_modules:  its copy of installed liberiries
+    npm install
+6), public folder:-    those files need through out project
+7),index.html :its only page that load the browser
+
+
+meta- data about datas
+-----
+
+8),reportWebVitals.js : used to measure react application
+compoent : basic unit of react application
+ -should start with capital letter
+ -inorder to use componets in other files
+                 1), export - export default componetname;
+                 2),import variable from url
+                 3), self closing tags : <componetname/>
+
+ different type of compoents
+********************************
+1), Functional component /stateless component
+----------------------
+eg:app component
+name should start in capital letter
+
+2), class component/statefull component
+    export default component
+
+    basic structure -rfce(react function component export)
+                        rcc- (react class component )
+
+how data sharing is happens in react compoent
+-unidirectional - parent-child
+--props : object
+{key:value}
+
+object destructuring
+child(props)
+child({key})
+
+
+how to style React component using css
+*external css 
+external file - extention filename.css
+import -> 
+-inline css 
+style={{property:value}}
+
+css module
+---------
+extention - filename.module.css
+ -can store into a variable and style using variable
+ -can create only src file
+
+
+ react event handing
+ -------------------
+ html onclick = "function()"
+ jsx onclick ={
+    function without arguement
+    onclick ={function name}
+
+    function with arguement 
+    onclick = 
+ }
+
+
+
+HOW TO GET VALUE FROM INPUT BOX 
+
+html = inputid.value 
+
+onChange(callback) - call 
+
+
+CONDITIONAL RENDERING 
+
+rendering : loading to browser 
+
+*if - truthy - &&
+*if else -ternary - ?:
+
+REACT STATE 
+
+-state is an object which stores properties of a react class component{key:value}
+-when the state changes the entire component re-render
+  setState() - to chane the value of the state 
+
+LIFE CYCLE OF REACT CLASS COMPONENTS 
+
+*mounting phase : component loading on DOM
+  -constructor() - initialize state 
+  -getDerivedStateFromProps() - modify the sate value with props 
+  -render() -load to DOM
+  -componentDidMount() - network request
+
+                            inshort it cleanup the component before it is removed from DOM
+
+
+
+*updating phase : editing of component-editing of component
+-getDerivedStateFromProps()-modify thee state value with props
+shouldComponentUpdate()- true or false
+-render()-load to DOM
+getSnapShotBeForeUpdate()-give access to previous staus before update
+-componentDidUpdate()-last method
+
+
+
+*unmounting phase : removal of component from DOM
+componentWillUnmount()-involved just before the unmount to cancel  if there any network is done etc......
+inshot it cleanup the component before it is removed from the DOM
+
+hooks
+-------------
+hooks -predefined function
+-to provide state  and lifecycle to Functional component
+
+
+rules
+------
+1),import hooks from react library to react Functional component
+2),can call hooks only at the top section of Functional component
+3),cannot use hooks on condtional base 
+
+hooks are 2 types
+1),predefined hooks                 2),custom hooks
+eg-useState
+-to create state in Functional component
+-it returns -state & function which can change the state
+-can store- string ,number object array...................
+
+rest-operator
+
+
+reguluar expression: to check the pattern of the given string 
+rule to create regular expression
+2),expression should begin with(doller)
+
+eg:/^[0-9]+$/
+
+
+
+
+
+
+
+
+
+
+react- fronent technology
+--------------------------------
+
+UI-User interface
+-----------------
+the point where te user -computer(software) intraction take place
+
+React use of JavaScript library for building user interfaces.
+liberiries- pre-defined codes to do perticular task
+-framework : pre-defined codes- highly restricted
+-library:pre-defined code with more freedom
+
+features of React
+------------------
+1), to create UI
+2), single page application : web application or website that intract with the user by dynamically rewriting the current webpage with new datas from the webserver , instead of default method of loading all the pages seperatelly
+3), declaritive application: 
+             doesnot access directly DOM real DOM created by browser
+
+4), virtual DOM: created by react, copying real dom and edit the virtual DOM    
+           diffing : process of comparing virtual dom with real dom
+            reconcilliation : process of updaating real dom
+5), immutable variable : cannot change value
+6), pure function : function that accept immutable variable and return an object -result only depnds on variable-eg: react componet
+7), data sharing : unidirection - parent to child
+8), language : jsx - JavaScript XML (its a combination of JavaScript,html, css)
+                        jsx expressio  must be inside a single parent element
+                        - empty tag - react fragment
+                        js code -jsx -to access {}
+
+9), transpiling : process of converting JSX into html JavaScript and css    
+                    BABEL- CONVERT 
+
+
+how to create a react project
+-----------------------------
+
+1), npx create-react-app projectname
+    npx-node package execute-
+    npm - node package manager-install
+
+2), change directory - cd projectname
+3), run command "npm start"
+
+files
+-----------
+1), readme.md : hold the discription of the files
+2), package.json : holds npm configurations - dependencies - installed liberiries
+3),package.lockjson : it holds versions of installed liberiries
+4), .gitignore : holds files that neednot to be pushed  into gitignore
+5), node_modules:  its copy of installed liberiries
+    npm install
+6), public folder:-    those files need through out project
+7),index.html :its only page that load the browser
+
+
+meta- data about datas
+-----
+
+8),reportWebVitals.js : used to measure react application
+compoent : basic unit of react application
+ -should start with capital letter
+ -inorder to use componets in other files
+                 1), export - export default componetname;
+                 2),import variable from url
+                 3), self closing tags : <componetname/>
+
+ different type of compoents
+********************************
+1), Functional component /stateless component
+----------------------
+eg:app component
+name should start in capital letter
+
+2), class component/statefull component
+    export default component
+
+    basic structure -rfce(react function component export)
+                        rcc- (react class component )
+
+how data sharing is happens in react compoent
+-unidirectional - parent-child
+--props : object
+{key:value}
+
+object destructuring
+child(props)
+child({key})
+
+
+how to style React component using css
+*external css 
+external file - extention filename.css
+import -> 
+-inline css 
+style={{property:value}}
+
+css module
+---------
+extention - filename.module.css
+ -can store into a variable and style using variable
+ -can create only src file
+
+
+ react event handing
+ -------------------
+ html onclick = "function()"
+ jsx onclick ={
+    function without arguement
+    onclick ={function name}
+
+    function with arguement 
+    onclick = 
+ }
+
+
+
+HOW TO GET VALUE FROM INPUT BOX 
+
+html = inputid.value 
+
+onChange(callback) - call 
+
+
+CONDITIONAL RENDERING 
+
+rendering : loading to browser 
+
+*if - truthy - &&
+*if else -ternary - ?:
+
+REACT STATE 
+
+-state is an object which stores properties of a react class component{key:value}
+-when the state changes the entire component re-render
+  setState() - to chane the value of the state 
+
+LIFE CYCLE OF REACT CLASS COMPONENTS 
+
+*mounting phase : component loading on DOM
+  -constructor() - initialize state 
+  -getDerivedStateFromProps() - modify the sate value with props 
+  -render() -load to DOM
+  -componentDidMount() - network request
+
+                            inshort it cleanup the component before it is removed from DOM
+
+
+
+*updating phase : editing of component-editing of component
+-getDerivedStateFromProps()-modify thee state value with props
+shouldComponentUpdate()- true or false
+-render()-load to DOM
+getSnapShotBeForeUpdate()-give access to previous staus before update
+-componentDidUpdate()-last method
+
+
+
+*unmounting phase : removal of component from DOM
+componentWillUnmount()-involved just before the unmount to cancel  if there any network is done etc......
+inshot it cleanup the component before it is removed from the DOM
+
+hooks
+-------------
+hooks -predefined function
+-to provide state  and lifecycle to Functional component
+
+
+rules
+------
+1),import hooks from react library to react Functional component
+2),can call hooks only at the top section of Functional component
+3),cannot use hooks on condtional base 
+
+hooks are 2 types
+1),predefined hooks                 2),custom hooks
+eg-useState
+-to create state in Functional component
+-it returns -state & function which can change the state
+-can store- string ,number object array...................
+
+rest-operator
+
+
+reguluar expression: to check the pattern of the given string 
+rule to create regular expression
+2),expression should begin with(doller)
+
+eg:/^[0-9]+$/
+
+
+
+
+
+
+
+
+
+
+react- fronent technology
+--------------------------------
+
+UI-User interface
+-----------------
+the point where te user -computer(software) intraction take place
+
+React use of JavaScript library for building user interfaces.
+liberiries- pre-defined codes to do perticular task
+-framework : pre-defined codes- highly restricted
+-library:pre-defined code with more freedom
+
+features of React
+------------------
+1), to create UI
+2), single page application : web application or website that intract with the user by dynamically rewriting the current webpage with new datas from the webserver , instead of default method of loading all the pages seperatelly
+3), declaritive application: 
+             doesnot access directly DOM real DOM created by browser
+
+4), virtual DOM: created by react, copying real dom and edit the virtual DOM    
+           diffing : process of comparing virtual dom with real dom
+            reconcilliation : process of updaating real dom
+5), immutable variable : cannot change value
+6), pure function : function that accept immutable variable and return an object -result only depnds on variable-eg: react componet
+7), data sharing : unidirection - parent to child
+8), language : jsx - JavaScript XML (its a combination of JavaScript,html, css)
+                        jsx expressio  must be inside a single parent element
+                        - empty tag - react fragment
+                        js code -jsx -to access {}
+
+9), transpiling : process of converting JSX into html JavaScript and css    
+                    BABEL- CONVERT 
+
+
+how to create a react project
+-----------------------------
+
+1), npx create-react-app projectname
+    npx-node package execute-
+    npm - node package manager-install
+
+2), change directory - cd projectname
+3), run command "npm start"
+
+files
+-----------
+1), readme.md : hold the discription of the files
+2), package.json : holds npm configurations - dependencies - installed liberiries
+3),package.lockjson : it holds versions of installed liberiries
+4), .gitignore : holds files that neednot to be pushed  into gitignore
+5), node_modules:  its copy of installed liberiries
+    npm install
+6), public folder:-    those files need through out project
+7),index.html :its only page that load the browser
+
+
+meta- data about datas
+-----
+
+8),reportWebVitals.js : used to measure react application
+compoent : basic unit of react application
+ -should start with capital letter
+ -inorder to use componets in other files
+                 1), export - export default componetname;
+                 2),import variable from url
+                 3), self closing tags : <componetname/>
+
+ different type of compoents
+********************************
+1), Functional component /stateless component
+----------------------
+eg:app component
+name should start in capital letter
+
+2), class component/statefull component
+    export default component
+
+    basic structure -rfce(react function component export)
+                        rcc- (react class component )
+
+how data sharing is happens in react compoent
+-unidirectional - parent-child
+--props : object
+{key:value}
+
+object destructuring
+child(props)
+child({key})
+
+
+how to style React component using css
+*external css 
+external file - extention filename.css
+import -> 
+-inline css 
+style={{property:value}}
+
+css module
+---------
+extention - filename.module.css
+ -can store into a variable and style using variable
+ -can create only src file
+
+
+ react event handing
+ -------------------
+ html onclick = "function()"
+ jsx onclick ={
+    function without arguement
+    onclick ={function name}
+
+    function with arguement 
+    onclick = 
+ }
+
+
+
+HOW TO GET VALUE FROM INPUT BOX 
+
+html = inputid.value 
+
+onChange(callback) - call 
+
+
+CONDITIONAL RENDERING 
+
+rendering : loading to browser 
+
+*if - truthy - &&
+*if else -ternary - ?:
+
+REACT STATE 
+
+-state is an object which stores properties of a react class component{key:value}
+-when the state changes the entire component re-render
+  setState() - to chane the value of the state 
+
+LIFE CYCLE OF REACT CLASS COMPONENTS 
+
+*mounting phase : component loading on DOM
+  -constructor() - initialize state 
+  -getDerivedStateFromProps() - modify the sate value with props 
+  -render() -load to DOM
+  -componentDidMount() - network request
+
+                            inshort it cleanup the component before it is removed from DOM
+
+
+
+*updating phase : editing of component-editing of component
+-getDerivedStateFromProps()-modify thee state value with props
+shouldComponentUpdate()- true or false
+-render()-load to DOM
+getSnapShotBeForeUpdate()-give access to previous staus before update
+-componentDidUpdate()-last method
+
+
+
+*unmounting phase : removal of component from DOM
+componentWillUnmount()-involved just before the unmount to cancel  if there any network is done etc......
+inshot it cleanup the component before it is removed from the DOM
+
+hooks
+-------------
+hooks -predefined function
+-to provide state  and lifecycle to Functional component
+
+
+rules
+------
+1),import hooks from react library to react Functional component
+2),can call hooks only at the top section of Functional component
+3),cannot use hooks on condtional base 
+
+hooks are 2 types
+1),predefined hooks                 2),custom hooks
+eg-useState
+-to create state in Functional component
+-it returns -state & function which can change the state
+-can store- string ,number object array...................
+
+rest-operator
+
+
+reguluar expression: to check the pattern of the given string 
+rule to create regular expression
+2),expression should begin with(doller)
+
+eg:/^[0-9]+$/
+
+
+
+
+
+
+
+
+react- fronent technology
+--------------------------------
+
+UI-User interface
+-----------------
+the point where te user -computer(software) intraction take place
+
+React use of JavaScript library for building user interfaces.
+liberiries- pre-defined codes to do perticular task
+-framework : pre-defined codes- highly restricted
+-library:pre-defined code with more freedom
+
+features of React
+------------------
+1), to create UI
+2), single page application : web application or website that intract with the user by dynamically rewriting the current webpage with new datas from the webserver , instead of default method of loading all the pages seperatelly
+3), declaritive application: 
+             doesnot access directly DOM real DOM created by browser
+
+4), virtual DOM: created by react, copying real dom and edit the virtual DOM    
+           diffing : process of comparing virtual dom with real dom
+            reconcilliation : process of updaating real dom
+5), immutable variable : cannot change value
+6), pure function : function that accept immutable variable and return an object -result only depnds on variable-eg: react componet
+7), data sharing : unidirection - parent to child
+8), language : jsx - JavaScript XML (its a combination of JavaScript,html, css)
+                        jsx expressio  must be inside a single parent element
+                        - empty tag - react fragment
+                        js code -jsx -to access {}
+
+9), transpiling : process of converting JSX into html JavaScript and css    
+                    BABEL- CONVERT 
+
+
+how to create a react project
+-----------------------------
+
+1), npx create-react-app projectname
+    npx-node package execute-
+    npm - node package manager-install
+
+2), change directory - cd projectname
+3), run command "npm start"
+
+files
+-----------
+1), readme.md : hold the discription of the files
+2), package.json : holds npm configurations - dependencies - installed liberiries
+3),package.lockjson : it holds versions of installed liberiries
+4), .gitignore : holds files that neednot to be pushed  into gitignore
+5), node_modules:  its copy of installed liberiries
+    npm install
+6), public folder:-    those files need through out project
+7),index.html :its only page that load the browser
+
+
+meta- data about datas
+-----
+
+8),reportWebVitals.js : used to measure react application
+compoent : basic unit of react application
+ -should start with capital letter
+ -inorder to use componets in other files
+                 1), export - export default componetname;
+                 2),import variable from url
+                 3), self closing tags : <componetname/>
+
+ different type of compoents
+********************************
+1), Functional component /stateless component
+----------------------
+eg:app component
+name should start in capital letter
+
+2), class component/statefull component
+    export default component
+
+    basic structure -rfce(react function component export)
+                        rcc- (react class component )
+
+how data sharing is happens in react compoent
+-unidirectional - parent-child
+--props : object
+{key:value}
+
+object destructuring
+child(props)
+child({key})
+
+
+how to style React component using css
+*external css 
+external file - extention filename.css
+import -> 
+-inline css 
+style={{property:value}}
+
+css module
+---------
+extention - filename.module.css
+ -can store into a variable and style using variable
+ -can create only src file
+
+
+ react event handing
+ -------------------
+ html onclick = "function()"
+ jsx onclick ={
+    function without arguement
+    onclick ={function name}
+
+    function with arguement 
+    onclick = 
+ }
+
+
+
+HOW TO GET VALUE FROM INPUT BOX 
+
+html = inputid.value 
+
+onChange(callback) - call 
+
+
+CONDITIONAL RENDERING 
+
+rendering : loading to browser 
+
+*if - truthy - &&
+*if else -ternary - ?:
+
+REACT STATE 
+
+-state is an object which stores properties of a react class component{key:value}
+-when the state changes the entire component re-render
+  setState() - to chane the value of the state 
+
+LIFE CYCLE OF REACT CLASS COMPONENTS 
+
+*mounting phase : component loading on DOM
+  -constructor() - initialize state 
+  -getDerivedStateFromProps() - modify the sate value with props 
+  -render() -load to DOM
+  -componentDidMount() - network request
+
+                            inshort it cleanup the component before it is removed from DOM
+
+
+
+*updating phase : editing of component-editing of component
+-getDerivedStateFromProps()-modify thee state value with props
+shouldComponentUpdate()- true or false
+-render()-load to DOM
+getSnapShotBeForeUpdate()-give access to previous staus before update
+-componentDidUpdate()-last method
+
+
+
+*unmounting phase : removal of component from DOM
+componentWillUnmount()-involved just before the unmount to cancel  if there any network is done etc......
+inshot it cleanup the component before it is removed from the DOM
+
+hooks
+-------------
+hooks -predefined function
+-to provide state  and lifecycle to Functional component
+
+
+rules
+------
+1),import hooks from react library to react Functional component
+2),can call hooks only at the top section of Functional component
+3),cannot use hooks on condtional base 
+
+hooks are 2 types
+1),predefined hooks                 2),custom hooks
+eg-useState
+-to create state in Functional component
+-it returns -state & function which can change the state
+-can store- string ,number object array...................
+
+rest-operator
+
+
+reguluar expression: to check the pattern of the given string 
+rule to create regular expression
+2),expression should begin with(doller)
+
+eg:/^[0-9]+$/
+
+match : if the pattern mathes witha given string
