@@ -80,12 +80,12 @@ function App() {
 
 
   return (
-    <div style={{ height: '100vh' }} className='d-flex justify-content-center align-items-center w-100 bg-dark'>
+    <div className='d-flex justify-content-center align-items-center p-5 bg-dark'>
       <div className='bg-light p-5 rounded'>
-        <h1>simple intrest App!</h1>
+        <h1 className='text-primary'>simple intrest </h1>
         <p>Calculate simple intrest Easily</p>
 
-        <div className='d-flex justify-content-center align-items-center w-100 p-3 flex-column rounded mt-4 bg-warning shadow '>
+        <div className='d-flex justify-content-center align-items-center w-100 flex-column rounded bg-danger shadow'>
           <h1>₹{''}{intrest}</h1>
           <p>total simple intrest</p>
         </div>
